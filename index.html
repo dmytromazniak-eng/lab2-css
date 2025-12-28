@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ЛР2 — CSS</title>
+
+
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+   
+        #note {
+            border: 1px solid #999;
+            padding: 10px;
+            margin: 10px 0;
+            background: #f7f7f7;
+        }
+
+       
+        .section-title {
+            margin-top: 22px;
+        }
+
+      
+        .pos-relative {
+            position: relative;
+            left: 10px;
+            top: 5px;
+        }
+    </style>
+
+   
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Лабораторна робота №2 (CSS)</h1>
+
+    <div id="note">
+        На цій сторінці показано 3 способи підключення CSS, селектори (tag/class/id),
+        position, float, список з власним маркером та Flexbox-композицію.
+    </div>
+
+    <h2 class="section-title">1) Inline-стиль (style атрибут)</h2>
+    <p style="color: #003366; background: #e9f2ff; padding: 8px;">
+        Це приклад inline-опису стилю (атрибут <b>style</b>).
+    </p>
+
+    <h2 class="section-title">2) Position (relative/absolute/fixed)</h2>
+
+    <p class="pos-relative">
+        Цей абзац зміщений через <b>position: relative</b> (див. стилі у &lt;style&gt;).
+    </p>
+
+    <div class="pos-box">
+        <b>Контейнер</b> (position: relative)
+        <span class="badge">ABS</span>
+        <p>Мітка “ABS” позиціонується абсолютно всередині контейнера.</p>
+    </div>
+
+    <div class="fixed-hint">
+        Fixed
+    </div>
+
+    <h2 class="section-title">3) Float</h2>
+    <div class="float-demo">
+        <img class="float-img" src="data:image/svg+xml;utf8,
+        <svg xmlns='http://www.w3.org/2000/svg' width='160' height='110'>
+            <rect x='1' y='1' width='158' height='108' fill='white' stroke='black' />
+            <text x='18' y='60' font-size='16' font-family='Arial'>FLOAT</text>
+        </svg>" alt="float demo">
+        <p>
+            Це демонстрація <b>float</b>: зображення “обтікається” текстом. Після блоку
+            використовується <b>clear</b>, щоб наступні елементи не залипали збоку.
+        </p>
+        <div class="clearfix"></div>
+    </div>
+
+    <h2 class="section-title">4) Список з власним маркером</h2>
+    <ul class="custom-list">
+        <li>Пункт зі спеціальним маркером через CSS</li>
+        <li>Другий пункт (маркер не стандартний)</li>
+        <li>Третій пункт</li>
+    </ul>
+
+    <h2 class="section-title">5) Flexbox-контейнер за зразком</h2>
+    <p>Композиція елементів як на картинці (5 квадратів і один високий прямокутник):</p>
+
+    <div class="flex-wrap">
+        <div class="tile">1</div>
+        <div class="tile tall">2</div>
+        <div class="tile">3</div>
+        <div class="tile">4</div>
+        <div class="tile">5</div>
+    </div>
+
+    <p>
+        <a href="page2.html">Перейти на другу сторінку (необов’язково для ЛР2)</a>
+    </p>
+</body>
+</html>
