@@ -1,20 +1,19 @@
 ﻿/* ====== Загальні стилі ====== */
 
-/* селектор тегу (показ ще раз, але це ок) */
 h1 {
     margin-bottom: 6px;
 }
 
-/* селектор класу */
 .section-title {
     border-bottom: 1px solid #ddd;
     padding-bottom: 6px;
+    margin-top: 22px;
 }
 
 /* ====== Position ====== */
 
 .pos-box {
-    position: relative; /* база для absolute всередині */
+    position: relative; /* база для absolute елемента всередині */
     border: 1px solid #333;
     padding: 12px;
     width: 420px;
@@ -65,8 +64,9 @@ h1 {
 /* ====== Кастомні маркери списку ====== */
 
 .custom-list {
-    list-style: none; /* прибираємо стандартні */
+    list-style: none; /* прибираємо стандартні маркери */
     padding-left: 0;
+    margin-left: 0;
 }
 
     .custom-list li {
@@ -86,15 +86,19 @@ h1 {
             box-sizing: border-box;
         }
 
-/* ====== Flexbox по зразку ====== */
+/* ====== Flexbox по зразку (5 квадратів + 1 високий прямокутник) ====== */
 
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
+    /* 3 колонки по 110px + 2 проміжки по 18px + padding 18*2 = 36
+     3*110 + 2*18 + 36 = 330 + 36 + 36 = 402
+     залишимо трішки запасу під border, тому 420 */
     width: 420px;
     border: 1px solid #999;
     padding: 18px;
+    box-sizing: border-box;
 }
 
 .tile {
@@ -109,7 +113,7 @@ h1 {
     font-weight: bold;
 }
 
-
+    /* центральний високий прямокутник (верхній ряд по центру) */
     .tile.tall {
-        height: 240px; /* високий */
+        height: 240px; /* високий блок */
     }
